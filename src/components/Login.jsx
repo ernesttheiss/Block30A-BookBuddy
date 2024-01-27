@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import './../index.css';
 
 const Login = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = async (e) => {
+  const handleLoginFormSubmit = async (e) => {
     e.preventDefault();
 
-    const loginEndpoint = 'https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/users/login'; // Will update with the correct login endpoint
+    const loginEndpoint = 'https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/users/login';
 
     try {
       const response = await fetch(loginEndpoint, {
@@ -36,19 +37,21 @@ const Login = ({ onLogin }) => {
   };
 
   return (
-    <form onSubmit={handleLogin}>
-      <label>
-        Email:
-        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
-      </label>
-      <br />
-      <label>
-        Password:
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      </label>
-      <br />
-      <button type="submit">Log in</button>
-    </form>
+    <div>
+      <form onSubmit={handleLoginFormSubmit}>
+        <label>
+          Email:
+          <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+        </label>
+        <br />
+        <label>
+          Password:
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        </label>
+        <br />
+        <button type="submit">Login</button>
+      </form>
+    </div>
   );
 };
 

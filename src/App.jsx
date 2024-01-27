@@ -1,13 +1,9 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './index.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Account from './components/Account';
 import Books from './components/Books';
 import Navbar from './components/Navigations';
 import Register from './components/Register';
-import SingleBook from './components/SingleBook';
-import Login from './components/Login';
-
-
+import Home from './components/Home';
 
 const App = () => {
   return (
@@ -15,11 +11,10 @@ const App = () => {
       <div>
         <Navbar />
         <Routes>
-          <Route path="/account" component={Account} />
-          <Route path="/books" component={Books} />
-          <Route path="/register" component={Register} />
-          <Route path="/book/:id" component={SingleBook} />
-          <Route path="/login" component={Login}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/books" element={<Books />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </div>
     </Router>
