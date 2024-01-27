@@ -36,7 +36,7 @@ const Register = () => {
 
       
       // Will send the user to the login page after registration.
-      navigate('/login');
+      navigate('/account');
       
     } catch (error) {
       setError(error.message);

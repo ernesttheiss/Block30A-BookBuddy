@@ -1,3 +1,4 @@
+// SingleBook.jsx
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -7,7 +8,7 @@ const SingleBook = ({ bookId }) => {
 
   useEffect(() => {
     const baseURL = 'https://fsa-book-buddy-b6e748d1380d.herokuapp.com';
-    
+
     fetch(`${baseURL}/api/books/${bookId}`, {
       headers: {
         'Content-Type': 'application/json',
@@ -41,6 +42,7 @@ const SingleBook = ({ bookId }) => {
 };
 
 SingleBook.propTypes = {
-    bookId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  };
+  bookId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+};
+
 export default SingleBook;
