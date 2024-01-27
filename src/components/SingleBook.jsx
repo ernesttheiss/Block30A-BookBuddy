@@ -6,9 +6,15 @@ const SingleBook = ({ bookId }) => {
   const [error, setError] = useState('');
 
   useEffect(() => {
+<<<<<<< HEAD
     const baseURL = 'https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/books';
 
     fetch(`${baseURL}/${bookId}`, {
+=======
+    const baseURL = 'https://fsa-book-buddy-b6e748d1380d.herokuapp.com';
+    
+    fetch(`${baseURL}/api/books/${bookId}`, {
+>>>>>>> 8f83ee3e618b3ec84a9dc813227825172a7a77d0
       headers: {
         'Content-Type': 'application/json',
       },
@@ -41,8 +47,13 @@ const SingleBook = ({ bookId }) => {
 };
 
 SingleBook.propTypes = {
+<<<<<<< HEAD
   bookId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 
+=======
+    bookId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  };
+>>>>>>> 8f83ee3e618b3ec84a9dc813227825172a7a77d0
 export default SingleBook;

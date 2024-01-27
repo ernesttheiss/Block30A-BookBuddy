@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
@@ -30,3 +31,30 @@ const NavBar = () => {
 };
 
 export default NavBar;
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const NavBar = () => {
+    return (
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/register">Register</Link>
+          </li>
+          <li>
+            <Link to="/books">Books</Link>
+          </li>
+          <li>
+            <Link to="/account">Account</Link>
+          </li>
+        </ul>
+      </div>
+    );
+  };
+  
+  export default NavBar;
+>>>>>>> 8f83ee3e618b3ec84a9dc813227825172a7a77d0

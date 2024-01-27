@@ -1,4 +1,5 @@
 import { useState } from 'react';
+<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
 import './../index.css'; // Import the new CSS file
 
@@ -8,6 +9,17 @@ const Register = () => {
     lastname: '',
     email: '',
     password: '',
+=======
+
+import { useNavigate } from 'react-router-dom';
+
+const Register = () => {
+  const [formData, setFormData] = useState({
+    firstname: '', 
+    lastname: '',  
+    email: '',     
+    password: '',  
+>>>>>>> 8f83ee3e618b3ec84a9dc813227825172a7a77d0
   });
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -32,16 +44,27 @@ const Register = () => {
         const errorData = await response.json();
         throw new Error(errorData.message || 'Registration failed');
       }
+<<<<<<< HEAD
 
       // Will send the user to the login page after registration.
       navigate('/login');
+=======
+      
+      // Will send the user to the login page after registration.
+      navigate('/login');
+      
+>>>>>>> 8f83ee3e618b3ec84a9dc813227825172a7a77d0
     } catch (error) {
       setError(error.message);
     }
   };
 
   return (
+<<<<<<< HEAD
     <div className="register-container">
+=======
+    <div>
+>>>>>>> 8f83ee3e618b3ec84a9dc813227825172a7a77d0
       <h2>Register</h2>
       {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
