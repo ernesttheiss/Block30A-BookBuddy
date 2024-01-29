@@ -1,4 +1,5 @@
-
+import 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
         Did you know that the longest sentence ever printed is 823 words long? It can be found in Victor Hugo's "Les Misérables."
       </p>
       <p className="home-welcome">
-        Ready to explore the world of books? Navigate to the <a className="home-link" href="/books">Books</a> or <a className="home-link" href="/account">Account</a> section to get started!
+        Ready to explore the world of books? Navigate to the <Link className="home-link" to="/books">Books</Link> or <Link className="home-link" to="/account">Account</Link> section to get started!
       </p>
       <p>Happy reading!</p>
     </div>

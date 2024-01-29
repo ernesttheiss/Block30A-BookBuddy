@@ -118,6 +118,7 @@ body {
 
 .book-item:hover {
   transform: scale(1.05);
+  background-color: #ffc107;
 }
 
 .book-title {
@@ -260,4 +261,51 @@ body {
 .error {
   color: #dc3545;
   margin-top: 10px;
+}
+
+.books-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap as needed */
+}
+
+.book-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-cover {
+  width: 100px; /* Adjust the size as needed */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.book-info {
+  text-align: center;
+}
+
+.book-title {
+  cursor: pointer;
+  color: blue; /* Style as a clickable item */
+  margin-bottom: 10px;
+}
+
+.book-button {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* media queries to handle responsiveness */
+@media (max-width: 600px) {
+  .book-list {
+    flex-direction: column;
+  }
 }
